@@ -27,3 +27,18 @@ echo "<li>".$row["login"].", ".$row["create_date"]."</li>";
 echo "</ul>";
 
 ?>
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+Apache:
+httpd.conf
+LoadFile "C:\Program Files (x86)\PostgreSQL\9.3\bin\libpq.dll"
+
+/////////////////////////////////////////////////////////////////////////////////
+descomentariar 
+php.ini
+extension=php_pdo_pgsql.dll
+extension=php_pgsql.dll
+
+
