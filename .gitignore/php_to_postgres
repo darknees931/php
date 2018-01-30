@@ -1,0 +1,29 @@
+<?php
+print 'carlos';
+//cadena de conexion
+$cadena = "host='192.168.0.13' port=5432 dbname='odoo' user='odoo' password='cajo10223' ";
+
+//funcion pgconect
+$con = pg_connect($cadena) or die("Error de conexion.". pg_last_error());
+
+
+//consulta sql
+$sql = "select * from res_users";
+
+//ejecutar sentencia sql con pg_query
+$result = pg_query($sql) or die("Error query.". pg_last_error());
+
+$cont = pg_num_rows($result);
+echo $cont;
+//recorrer con while los resultados obtenidos
+echo "<ul>";
+while ($row = pg_fetch_array($result, null, PGSQL_ASSOC))
+{
+
+//print $row["login"];
+echo "<li>".$row["login"].", ".$row["create_date"]."</li>";
+
+}
+echo "</ul>";
+
+?>
