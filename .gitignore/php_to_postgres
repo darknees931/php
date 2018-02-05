@@ -42,3 +42,28 @@ extension=php_pdo_pgsql.dll
 extension=php_pgsql.dll
 
 
+
+
+
+create table prueba (
+id integer primary key,
+campo1 char (30),
+campo2 char(30),
+campo3 integer
+);
+
+
+
+
+INSERT INTO prueba (id, campo1, campo2, campo3)
+VALUES (4,'PostgreSQL Tutorial','ds',2);
+
+
+
+
+
+
+
+
+
+
