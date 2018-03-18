@@ -1,0 +1,6 @@
+
+SELECT articulos.*, articulos.*, pedidos.*
+FROM articulos
+INNER JOIN articulos_pedidos ON articulos.id = articulos_pedidos.articulos_id
+INNER JOIN pedidos on pedidos.id=articulos_pedidos.pedidos_id
+WHERE tipo = 'Produccion';
